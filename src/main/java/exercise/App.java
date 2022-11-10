@@ -32,11 +32,10 @@ public class App {
 
     private static int getPort() {
         String port = System.getenv("PORT");
-        final int defaultPort = 5000;
         if (port != null) {
             return Integer.parseInt(port);
         }
-        return defaultPort;
+        return 5000;
     }
 
     private static String getFileContent(String fileName) throws IOException {
